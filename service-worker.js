@@ -8,6 +8,7 @@ self.addEventListener('install', (event) => {
                 '/background.js',
                 '/malicious_urls.csv',
                 '/blocked.html',
+                '/popup.html',
                 '/images/anti.png',
                 '/images/bug.png'
             ]);
