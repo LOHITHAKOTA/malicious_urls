@@ -6,13 +6,105 @@
     <title>Malicious URL Detector</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="manifest" href="manifest.json">
+    <style>
+        /* General Body Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 250px;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+            width: 300px;
+        }
+    
+        /* Container Card Styling */
+        .container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+        }
+    
+        /* Title Styling */
+        h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #4a4a4a;
+        }
+    
+        /* Input Field Styling */
+        input[type="text"] {
+            padding: 12px;
+            width: calc(100% - 24px);
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+    
+        input[type="text"]:focus {
+            border-color: #74ebd5;
+            outline: none;
+        }
+    
+        /* Button Styling */
+        button {
+            padding: 12px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+    
+        button:hover {
+            background: #45a049;
+            transform: scale(1.05);
+        }
+    
+        /* Message Styling */
+        #message {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    
+        /* Icon Styling for Safe/Unsafe */
+        .icon {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+    
+        .safe {
+            color: #4CAF50;
+        }
+    
+        .unsafe {
+            color: #E53935;
+        }
+    </style>
 </head>
 <body>
-    <h1>Malicious URL Detector</h1>
-    <input type="text" id="urlInput" placeholder="Enter URL to check">
-    <button onclick="checkURL()">Check</button>
-    <p id="result"></p>
-
+    <div class="container">
+        <h2>🔒 URL Safety Checker</h2>
+        <input type="text" id="urlInput" placeholder="Enter URL here">
+        <button onclick="checkURL()" id="checkButton">Check URL</button>
+        <p id="message"></p>
+        <p id="result"></p>
+    </div>
     <script src="app.js"></script>
     <script>
         if ('serviceWorker' in navigator) {
@@ -23,3 +115,4 @@
     </script>
 </body>
 </html>
+
