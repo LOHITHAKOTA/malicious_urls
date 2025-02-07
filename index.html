@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malicious URL Detector</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <h1>Malicious URL Detector</h1>
+    <input type="text" id="urlInput" placeholder="Enter URL to check">
+    <button onclick="checkURL()">Check</button>
+    <p id="result"></p>
+
+    <script src="app.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js')
+            .then(reg => console.log("Service Worker Registered"))
+            .catch(err => console.log("Service Worker Failed", err));
+        }
+    </script>
+</body>
+</html>

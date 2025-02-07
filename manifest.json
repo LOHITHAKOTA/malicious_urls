@@ -1,0 +1,26 @@
+{
+    "name": "Malicious URL Detector",
+    "short_name": "URL Detector",
+    "version": "1.0",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#4CAF50",
+    "icons": [
+      {
+        "src": "images/anti.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "images/bug.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "permissions": [],
+    "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self';"
+    }
+  }
+  
